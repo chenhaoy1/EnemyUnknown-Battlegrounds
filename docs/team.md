@@ -9,8 +9,8 @@ title:  Team
 ## Chenhao Yang
 ***UCI Net ID***: chenhay2
 
-## USER 2
-***UCI Net ID***: ucinetid2
+## Kuangzhe Xu
+***UCI Net ID***: kuangzx
 
-## USER 3
-***UCI Net ID***: ucinetid3
+## Yuan Xia
+***UCI Net ID***: yxia11
