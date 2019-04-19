@@ -12,7 +12,7 @@ The input should be the agent's nearby environment, which would be represented a
 
 ## AI/ML Algorithms 
 
-
+Dijkstra algorithm wll be used as AI algorithm. We also will use Q-learning to train the agent get the max rewards, as well as decision tree and random forests. For further, we may explore more useful algrithm.
 
 
 
