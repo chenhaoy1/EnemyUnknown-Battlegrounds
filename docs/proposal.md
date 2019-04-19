@@ -19,7 +19,7 @@ Dijkstra algorithm wll be used as AI algorithm. We also will use Q-learning to t
 
 We plan to evaluate our agent based on two categories: quantitatively and qualitatively. 
 
-For the quantitative category, we have some metrics to evaluate the final result. The first one is N, the number of different monster eliminated during the whole game. The second one is S, the score of different types of monsters gained by killing it. The third one is the total time the agent stays alive.
+For the quantitative category, we have some metrics to evaluate the final result. The first one is N, the number of different monster eliminated during the whole game. The second one is S, the score of different types of monsters gained by killing it. The third one is the total time the agent stays alive.We will give the agent 8 mins to train himself before we star the game. 
 
 For the qualitative category, we have a formula to measure the AI model's preformance. The Performance qualitative score should be W1*Sum(Ni*Si) + W2*T.(the weights for each metric will be determined later)
 
