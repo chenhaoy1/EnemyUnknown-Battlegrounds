@@ -3,7 +3,7 @@ layout: default
 title:  Home
 ---
 
-<img src="https://game-accessibility.com/wp/wp-content/uploads/2015/08/Minecraft-1.jpg" width="100%">
+<img src="https://i.ytimg.com/vi/qRCHw55AJ-A/maxresdefault.jpg" width="100%">
 
 ## Links
 
