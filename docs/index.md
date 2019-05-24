@@ -3,7 +3,7 @@ layout: default
 title:  Home
 ---
 
-<img src="https://i.ytimg.com/vi/qRCHw55AJ-A/maxresdefault.jpg" width="100%>
+<img src="https://i.ytimg.com/vi/qRCHw55AJ-A/maxresdefault.jpg" width="50%>
 
 ## Links
 
