@@ -8,7 +8,7 @@ Our remaining goal is to make our agent more intelligent.
 To achieve this goal, our algorithm should be improved still. We plan to add the deep q learning algorithm to the evaluation part, which would perform better for larger state space and unknown transition probabilities. The most challenging part for our team right now is how to integrate this algorithm correctly in our current code. We need to add a linear function as our value function instead of using q-table. The neural network also could be considered in order to solve more complicated situation.
 Our next goal is to add pigs into the world, which can be exploited to increase our health points by eliminating them. It is also challenging to integrate this action and reward to our algorithm. We will evaluate this action later.
 We might use some pseudo code of deep q learning into our later modification.
-
+   
 class DQNAgent:
     def __init__(self, state_size, action_size):
         self.state_size = state_size
