@@ -2,6 +2,13 @@
 layout: default
 title: Status
 ---
+
+Project Summary: 
+Our agent in this submission is a prototype of our final agent. The agent should survive in the world as long as possible by learning to avoid enemies’ attacks. If attacked, the agent’s health points will be deducted and it will die and quit immediately when its health points reaches 0. Our goal is make our agent survive in a random world longer by integrating q learning algorithm in its learning part.
+
+Approach: 
+First of all, the agent with its current state will get a list of possible actions and choose a move by implementing ε-Greedy Policy. Instead, The agent returns a random action with probability eps, but with (1-eps) it picks the action with the highest Q-value. The code below perform the above description.
+
 Remaining Goals and Challenges: 
 
 Our remaining goal is to make our agent more intelligent. 
