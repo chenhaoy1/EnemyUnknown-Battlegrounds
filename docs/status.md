@@ -9,7 +9,8 @@ Our agent in this submission is a prototype of our final agent. The agent should
 
 Approach: 
 
-Our q learning algorithm's logic is quite similar to the pseudo code given below.
+Our basic idea is from Assignment2.
+The q learning algorithm's logic is quite similar to the pseudo code given below.
 
 <img src="Pseudocode.jpg" width="50%">
 <img src="Pseudocode1.jpg" width="50%">
