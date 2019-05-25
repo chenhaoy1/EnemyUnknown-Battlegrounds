@@ -8,8 +8,7 @@ title: Status
 Our agent in this submission is a prototype of our final agent. **The agent should survive in the world as long as possible by learning to avoid enemies’ attacks.** If attacked, the agent’s health points will be deducted and it will die and quit immediately when its health points reaches 0. Our goal is make our agent survive in a random world longer by integrating q learning algorithm in its learning part.
 
 ## Approach: 
-
-Our basic idea is from Assignment2.
+For now we have 3 Zombies and 2 pigs spawn randomly in a 40X40 flat ground. And our basic algorithm idea is from Assignment2.
 The q learning algorithm's logic is quite similar to the pseudo code given below.
 
 <img src="Pseudocode.jpg" width="50%">
