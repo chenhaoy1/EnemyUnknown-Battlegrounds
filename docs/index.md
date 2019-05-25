@@ -15,6 +15,7 @@ Our agent in this submission is a prototype of our final agent. The agent should
 
 ## Resources Used:
 
-1.The resource used for deep q learning tutorial: https://sergioskar.github.io/Deep_Q_Learning/
+1.The resource used for deep q learning tutorial:[https://sergioskar.github.io/Deep_Q_Learning/](https://sergioskar.github.io/Deep_Q_Learning/)
 
-2.The simple reinforcement learning tutorial: https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-0-q-learning-with-tables-and-neural-networks-d195264329d0
+2.The simple reinforcement learning tutorial: [https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-0-q-learning-with-tables-and-neural-networks-d195264329d0]
+(https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-0-q-learning-with-tables-and-neural-networks-d195264329d0)
