@@ -11,8 +11,8 @@ Approach:
 
 Our q learning algorithm's logic is quite similar to the pseudo code given below.
 
-<img src="Pseudocode.png" width="50%">
-<img src="Pseudocode1.png" width="50%">
+<img src="Pseudocode.jpg" width="50%">
+<img src="Pseudocode1.jpg" width="50%">
 
 First of all, the agent with its current state will get a list of possible actions and choose a move by implementing ε-Greedy Policy. Instead, The agent returns a random action with probability eps, but with (1-eps) it picks the action with the highest Q-value. The code below perform the above description.
 
