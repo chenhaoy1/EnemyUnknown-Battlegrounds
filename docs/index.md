@@ -10,7 +10,7 @@ Our agent in this submission is a prototype of our final agent. The agent should
 
 ## Links
 
-- [Status Video]()
+- [Status Video](https://youtu.be/2ey-V3Ujuic)
 - [Source code](https://github.com/chenhaoy1/EnemyUnknown-Battlegrounds)
 
 ## Resources Used:
