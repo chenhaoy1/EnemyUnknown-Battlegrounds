@@ -36,6 +36,8 @@ The code below perform the above description.
 We use the MSE between the predicted Q-value and the actual Q-value to plot our agent's performance.
 We plot the 140 episode to see the actual performance of our agent.
 As we can see from the plot, the alive time for our agent is increasing gradually from first 10s to the last 30s. However, the MSE is still too large than we expected. I think we have too many possible actions and rewards which are too complicated for q-learning algorithm to learn. Also, there are some actions we don't expect like die in the pitfall directly which will affect the MSE greatly. As a result, we decide to improve our algorithm to learn and find a better reward for each action that will cause the agent to die. The algorithm is the most significant things we should do now.
+
+
 <img src="5.jpg" width="50%">
 
 ## Remaining Goals and Challenges: 
