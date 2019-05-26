@@ -39,7 +39,7 @@ We just easily use the alive time of the agent to evaluate our agent’s perform
 
 
 Generally, the alive time of the agent is improved. We plot the 140 episode to see the actual performance of our agent.
-As we can see from the plot, the alive time for our agent is increasing gradually from first 10s to the last 30s. However, the survial time is still too low than we expected. I think we have too many possible states and rewards which are too complicated for q-learning algorithm to learn. Also, there are some states we don't expect like die in the pitfall directly which will affect the alive time greatly. What's more, the reason that the alive time is still low is our learning rate is too small(0.03). As a result, we decide to improve our algorithm to learn and find a better reward for each state that will cause the agent to die and increase our learning rate. The algorithm is the most significant part we should do now.
+As we can see from the plot, the alive time for our agent is increasing gradually from first 10s to the last 30s. However, the survial time is still too low than we expected. I think we have too many possible states and rewards which are too complicated for q-learning algorithm to learn. Also, there are some states we don't expect like dying in the pitfall directly which will affect the alive time greatly. What's more, the reason that the alive time is still low is our learning rate is too small(0.03). As a result, we decide to improve our algorithm to learn and find a better reward for each state that will cause the agent to die and increase our learning rate. The algorithm is the most significant part we should do now before the final.
 
 
 
