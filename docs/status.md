@@ -5,7 +5,7 @@ title: Status
 
 ## Video
 <div style="position:relative;height:0;padding-bottom:56.25%"><iframe width="560" height="315" src="https://www.youtube.com/embed/2ey-V3Ujuic" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+</div>
 
 ## Project Summary: 
 
@@ -33,6 +33,7 @@ The code below perform the above description.
 <img src="4.jpg" width="50%">
 
 ## Evaluation
+We use the MSE between 
 <img src="5.jpg" width="50%">
 
 ## Remaining Goals and Challenges: 
