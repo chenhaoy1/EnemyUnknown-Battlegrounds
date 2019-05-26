@@ -2,7 +2,9 @@
 layout: default
 title: Status
 ---
-<div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://youtu.be/2ey-V3Ujuic" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
+
+## Video
+[![Video](http://img.youtube.com/vi/LjnAuq_4ytM/0.jpg)](https://youtu.be/2ey-V3Ujuic)
 ## Project Summary: 
 
 Our agent in this submission is a prototype of our final agent. **The agent should survive in the world as long as possible by learning to avoid enemies’ attacks.** If attacked, the agent’s health points will be deducted and it will die and quit immediately when its health points reaches 0. Our goal is make our agent survive in a random world longer by integrating q learning algorithm in its learning part.
@@ -29,7 +31,7 @@ The code below perform the above description.
 <img src="4.jpg" width="50%">
 
 ## Evaluation
-
+<img src="5.jpg" width="50%">
 
 ## Remaining Goals and Challenges: 
 
