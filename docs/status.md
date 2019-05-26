@@ -4,7 +4,9 @@ title: Status
 ---
 
 ## Video
-[![Video](http://img.youtube.com/vi/LjnAuq_4ytM/0.jpg)](https://youtu.be/2ey-V3Ujuic)
+<<iframe width="560" height="315" src="https://www.youtube.com/embed/2ey-V3Ujuic" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 ## Project Summary: 
 
 Our agent in this submission is a prototype of our final agent. **The agent should survive in the world as long as possible by learning to avoid enemies’ attacks.** If attacked, the agent’s health points will be deducted and it will die and quit immediately when its health points reaches 0. Our goal is make our agent survive in a random world longer by integrating q learning algorithm in its learning part.
