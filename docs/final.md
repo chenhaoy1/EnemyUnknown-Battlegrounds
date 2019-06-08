@@ -27,9 +27,14 @@ And our basic algorithm idea is from CS 175 classes. We decision to use Q-learni
 
 The constant values work pretty well for our environment, so we perserve the value of each constant. 
 
-
-<img src="11.png" width="50%">
-
+```python
+   class player(object):
+       def __init__(self,alpha=0.3,gamma=1,n=1):
+           self.epsilon = 0.3
+           self.n, self.alpha,self.gamma = n, alpha, gamma
+           self.entities = {}
+           self.q_table = {}
+```
 
 α = 0.3 - Based on our stochastic environment, we decide to use a small alpha value(0.3) to train our agent. In compromise of learning speed, our agent can learn stably with the small alpha value due to the complicated state and environment. It greatly fits our environment and the performance of agent becomes significantly better after trainning for a while.
 
