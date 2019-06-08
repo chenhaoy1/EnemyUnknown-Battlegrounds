@@ -23,6 +23,8 @@ The q learning algorithm's logic is quite similar to the pseudo code given below
 <img src="Pseudocode1.jpg" width="50%">
 <img src="8.png" width="50%">
 </div>
+From the picture draw above, we use the tangent calculated by the agent position and the enemy's postion to detect the nearby enemies. In the circle with radius 2, the agent can attack to kill a pig to increase its health points, and the reward is (). The agent can also detect the enemies in the circle with radius 8. There are 8 different areas which seperated by tangent. In these areas, the agent can try to escape from the enemies as far as possible with a reward (). 
+
 First of all, the agent with its current state will get a list of possible actions and choose a move by implementing ε-Greedy Policy. Instead, The agent returns a random action with probability eps, but with (1-eps) it picks the action with the highest Q-value. The code below perform the above description.
 
 <img src="1.jpg" width="50%">
