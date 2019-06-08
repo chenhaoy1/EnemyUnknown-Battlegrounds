@@ -77,7 +77,7 @@ The equation looks like this: Q(s,a) <- Q(s,a)+alpha(r+y(maxQ(s',a')-Q(s,a))). T
 ```
 
 ### Action
-The agent has 6 actions now (left, right, forward, backward, attack, stop).
+The agent has 6 actions now (left, right, forward, backward, attack, stop). The agent can run 4 different directions and even stop to escape from enemies. To benefit from the environment, the agent can attack its prey(pigs) to increase its health points according to its rewards.
 
 
 <div align="center">
