@@ -44,7 +44,7 @@ The constant values work pretty well for our environment, so we perserve the val
 
 n = 1 - N is the number of backsteps to update. We set it to 1 because we want to update our Q table immediately after each action. It works well in our environment. 
 
-What's more, we use update_q_table function to update the table of our agent resulting from rewards.
+What's more, we use update_q_table and choose_move function to update the table of our agent resulting from rewards and then choose the best move of the agent. The agent will deal with the current reward after getting into each move. The agent will update the q_table, which we stores the table as one of our agent. The basic logic of the implementation of updating q_table is Bellman equation provided during the lectures. The equation looks like this: Q(s,a) <- Q(s,a)+alpha(r+y(maxQ(s',a')-Q(s,a))). According to the tutorial online, the formula means "the expected long-term reward for a given action is equal to the immediate reward from the current action combined with the expected reward from the best future action taken at the following state." The code below perform the above description.
 ```python
    def update_q_table(self, tau, S, A, R, T):
         """Performs relevant updates for state tau.
@@ -72,6 +72,41 @@ What's more, we use update_q_table function to update the table of our agent res
         old_q = self.q_table[curr_s][curr_a]
         self.q_table[curr_s][curr_a] = old_q + self.alpha * (G - old_q)
 ```
+```python
+   def choose_move(self,c_state,pm,eps):
+      print(pm)
+      if c_state not in self.q_table:
+         self.q_table[c_state] = {}
+         for action in pm:
+            if action not in self.q_table[c_state]:
+               self.q_table[c_state][action] = 0
+
+      rnd = random.random()
+      if(rnd<=eps):
+        a = random.randint(0,len(pm)-1)
+        print(pm[a])
+        return pm[a]
+      else:
+        max_list = []
+        act_reward = sorted(self.q_table[c_state].items(),key=lambda x:x[1],reverse = True)
+        maxa = -1
+        for i in range(len(act_reward)):
+            if(act_reward[i][0] in pm):
+              maxa = act_reward[i][1]
+              break
+        for item in act_reward:
+            if(item[1] >= maxa and item[0] in pm):
+               max_list.append(item[0])
+        if(len(max_list)>1):
+           a = random.randint(0,len(max_list)-1)
+        elif(len(max_list)==1):
+           a = 0
+        else:
+           print(pm[0])
+           return pm[0]
+        print(max_list[a])
+        return max_list[a]
+```
 First of all, the agent with its current state will get a list of possible actions and choose a move by implementing ε-Greedy Policy. Instead, The agent returns a random action with probability eps, but with (1-eps) it picks the action with the highest Q-value. The code below perform the above description.
 
 <img src="10.png" width="50%">
@@ -81,8 +116,7 @@ After every move of our agent, the agent will get a current state and store the 
 <img src="2.jpg" width="50%">
 <img src="3.jpg" width="50%">
 
-The agent will deal with the current reward after getting into each move. The agent will update the q_table, which we stores the table as one of our agent. The basic logic of the implementation of updating q_table is Bellman equation provided during the lectures. The equation looks like this: Q(s,a) <- Q(s,a)+alpha(r+y(maxQ(s',a')-Q(s,a))). According to the tutorial online, the formula means “the expected long-term reward for a given action is equal to the immediate reward from the current action combined with the expected reward from the best future action taken at the following state.”
-The code below perform the above description.
+
 
 <img src="4.jpg" width="50%">
 ### Action 
