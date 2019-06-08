@@ -90,7 +90,11 @@ The agent has 6 actions now (left, right, forward, backward, attack, stop). The 
 
 
 ### State Space
+<div align="center">
+
 <img src="8.png" width="50%">
+</div> 
+
 From the picture draw above, we use the tangent calculated by the agent position and the enemy's postion to detect the nearby enemies. The red spot represents the position of the agent. In the circle with radius 2, the agent can attack to kill a pig to increase its health points. The agent can also detect the enemies by two different ways. In the circle with radius 8, the agent will get more punishments to escape from enemies as far as possible. Outside the circle with radius 8, the agent will also try to keep away from its enemies but with less punishments. 
 
 ### Rewards
