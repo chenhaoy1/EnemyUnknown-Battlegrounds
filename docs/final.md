@@ -100,6 +100,41 @@ From the picture draw above, we use the tangent calculated by the agent position
 ### Rewards
 First of all, the agent with its current state will get a list of possible actions and choose a move by implementing ε-Greedy Policy. Instead, The agent returns a random action with probability eps, but with (1-eps) it picks the action with the highest Q-value. The code below perform the above description.
 
-<img src="10.png" width="50%">
+```python
+   possible_actions = self.get_possible_move(agent_host)
+   a0 = self.choose_move(s0, possible_actions, self.epsilon)
+   S.append(s0)
+   A.append(a0)
+   R.append(0)
+   T = sys.maxsize
+   for t in range(sys.maxsize):
+       time.sleep(0.1)
+           if t < T:
+               current_r = 0
+               elf.act(agent_host,A[-1])
+               temp_s = self.get_curr_state(agent_host)
+               #print(temp_s[0])
+               if(temp_s[0]==0):
+                   current_r=-1000
+                   time.sleep(1)
+               elif(temp_s[0]==1):
+                   current_r=current_r-100
+                   elif(temp_s[0]==2):
+                   current_r=current_r+5
 
+               for y in range(1,3):
+                   if(temp_s[y][0]==0):
+                       current_r = current_r-5
+                   elif(temp_s[y][0]==1):
+                       current_r = current_r-50
+                   elif(temp_s[y][0]==-1):
+                       current_r = current_r+100
+                R.append(current_r)
+                if(temp_s[0]==0):
+                    # Terminating state
+                    agent_host.sendCommand('quit')
+                    T = t + 1
+                    S.append('Term State')
+                    present_reward = current_r
+```
 After every move of our agent, the agent will get a current state and store the privous state. There are states we have. The first one is our health points, the second and third one is the relative distance of the closest two enemies surrounding the agent. The health points of 0 means the agent dies and reward is -1000. 1 means half alive and the reward is -50. 2 means full alive and the reward is +50. The distance value of 0 means greater distance between the agent and the enemy and the reward is +50. The distance value of 1 means closer distance and reward is -50. The agent will always compute the total reward it gains by checking its current state and it stores current and next status, action, reward for upating q-table. If agent find its health points reach 0, it will return the final reward to the terminal and quit the game immediately without continuing any afterward steps. If it is still alive, the agent will continue to find the next action and act. The code below perform the above description.
