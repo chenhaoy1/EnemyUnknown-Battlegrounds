@@ -44,6 +44,34 @@ The constant values work pretty well for our environment, so we perserve the val
 
 n = 1 - N is the number of backsteps to update. We set it to 1 because we want to update our Q table immediately after each action. It works well in our environment. 
 
+What's more, we use update_q_table function to update the table of our agent resulting from rewards.
+```python
+   def update_q_table(self, tau, S, A, R, T):
+        """Performs relevant updates for state tau.
+
+        Args
+            tau: <int>  state index to update
+            S:   <dequqe>   states queue
+            A:   <dequqe>   actions queue
+            R:   <dequqe>   rewards queue
+            T:   <int>      terminating state index
+        """
+       # print(S,A,R)
+        curr_s, curr_a, curr_r = S.popleft(), A.popleft(), R.popleft()
+        G = sum([self.gamma ** i * R[i] for i in range(len(S))])
+       # print(G) 
+        if tau + self.n < T:
+            try:
+               G += self.gamma ** self.n * self.q_table[S[-1]][A[-1]]
+            except:
+               pass
+        if(curr_s not in self.q_table):
+           self.q_table[curr_s] = {}
+        if(curr_a not in self.q_table[curr_s]):
+           self.q_table[curr_s][curr_a] = 0
+        old_q = self.q_table[curr_s][curr_a]
+        self.q_table[curr_s][curr_a] = old_q + self.alpha * (G - old_q)
+```
 First of all, the agent with its current state will get a list of possible actions and choose a move by implementing ε-Greedy Policy. Instead, The agent returns a random action with probability eps, but with (1-eps) it picks the action with the highest Q-value. The code below perform the above description.
 
 <img src="10.png" width="50%">
