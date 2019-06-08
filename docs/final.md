@@ -81,9 +81,9 @@ The agent has 6 actions now (left, right, forward, backward, attack, stop).
 
 
 <div align="center">
-<img src="14.png" width="425> <img src="15.png" width="425>
+<img src="14.png" width="400"> <img src="15.png" width="400">
 <br />
-<img src="16.png" width="425> <img src="17.png" width="425>
+<img src="16.png" width="400"> <img src="17.png" width="400">
 </div> 
 
 
