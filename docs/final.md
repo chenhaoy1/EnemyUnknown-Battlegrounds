@@ -44,7 +44,8 @@ The constant values work pretty well for our environment, so we perserve the val
 
 n = 1 - N is the number of backsteps to update. We set it to 1 because we want to update our Q table immediately after each action. It works well in our environment. 
 
-What's more, we use update_q_table and choose_move function to update the table of our agent resulting from rewards and then choose the best move of the agent. The agent will deal with the current reward after getting into each move. The agent will update the q_table, which we stores the table as one of our agent. The basic logic of the implementation of updating q_table is Bellman equation provided during the lectures. The equation looks like this: Q(s,a) <- Q(s,a)+alpha(r+y(maxQ(s',a')-Q(s,a))). According to the tutorial online, the formula means "the expected long-term reward for a given action is equal to the immediate reward from the current action combined with the expected reward from the best future action taken at the following state." The code below perform the above description.
+What's more, we use update_q_table and choose_move function to update the table of our agent resulting from rewards and then choose the best move of the agent. The agent will deal with the current reward after getting into each move. The agent will update the q_table, which we stores the table as one of our agent. The basic logic of the implementation of updating q_table is Bellman equation provided during the lectures. The equation looks like this: 
+Q(s,a) <- Q(s,a)+alpha(r+y(maxQ(s',a')-Q(s,a))). According to the tutorial online, the formula means "the expected long-term reward for a given action is equal to the immediate reward from the current action combined with the expected reward from the best future action taken at the following state." The code below perform the above description.
 ```python
    def update_q_table(self, tau, S, A, R, T):
         """Performs relevant updates for state tau.
