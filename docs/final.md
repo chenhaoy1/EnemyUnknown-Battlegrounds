@@ -86,7 +86,33 @@ The agent has 6 actions now (left, right, forward, backward, attack, stop). The 
 <img src="16.png" width="400"> <img src="17.png" width="400">
 </div> 
 
-
+Below is part of corresponding action code for reference.
+```python
+   if(act=='forward'):
+        #print('forward')
+        agent_host.sendCommand("strafe 0")
+        agent_host.sendCommand("move 1")
+        time.sleep(1) 
+      elif(act=='backward'):
+        #print('backward')
+        agent_host.sendCommand("strafe 0")
+        agent_host.sendCommand("move -1")
+        time.sleep(0.8)
+      elif(act=='left'):
+        #print('left')
+        agent_host.sendCommand("move 0")
+        agent_host.sendCommand("strafe -1")
+        time.sleep(0.8)
+      elif(act=='right'):
+        #print('right')
+        agent_host.sendCommand("move 0")
+        agent_host.sendCommand("strafe 1")
+        time.sleep(0.8)       
+      elif(act == 'stop'):
+        agent_host.sendCommand("move 0")
+        agent_host.sendCommand("strafe 0")
+        time.sleep(0.4)
+```
 
 
 ### State Space
