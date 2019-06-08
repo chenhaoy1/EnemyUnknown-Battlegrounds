@@ -95,7 +95,7 @@ The agent has 6 actions now (left, right, forward, backward, attack, stop). The 
 <img src="8.png" width="50%">
 </div> 
 
-From the picture draw above, we use the tangent calculated by the agent position and the enemy's postion to detect the nearby enemies. The red spot represents the position of the agent. In the circle with radius 2, the agent can attack to kill a pig to increase its health points. The agent can also detect the enemies by two different ways. In the circle with radius 8, the agent will get more punishments to escape from enemies as far as possible. Outside the circle with radius 8, the agent will also try to keep away from its enemies but with less punishments. 
+From the picture draw above, we use the tangent calculated by the agent position and the enemy's postion to detect the nearby enemies. The red spot represents the position of the agent. In the circle with radius 2, the agent can attack to kill a pig to increase its health points. The agent can also detect the enemies by two different ways. In the circle with radius 8, the agent will get more punishments to escape from enemies as far as possible. Outside the circle with radius 8, the agent will also try to keep away from its enemies but with less punishments. If the agent don't detect the zombies nearby, it will return -1 to the current state.
 
 ### Rewards
 First of all, the agent with its current state will get a list of possible actions and choose a move by implementing ε-Greedy Policy. Instead, The agent returns a random action with probability eps, but with (1-eps) it picks the action with the highest Q-value. The code below perform the above description.
