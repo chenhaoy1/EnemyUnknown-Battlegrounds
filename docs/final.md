@@ -78,11 +78,17 @@ The equation looks like this: Q(s,a) <- Q(s,a)+alpha(r+y(maxQ(s',a')-Q(s,a))). T
 
 ### Action
 The agent has 6 actions now (left, right, forward, backward, attack, stop).
+
+
 <div align="center">
 <img src="14.png" width="400> <img src="15.png" width="400>
 <br />
 <img src="16.png" width="400> <img src="17.png" width="400>
 </div> 
+
+
+
+
 
 ### State Space
 <img src="8.png" width="50%">
