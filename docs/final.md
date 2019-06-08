@@ -17,4 +17,5 @@ This project is non-trivial because it is a brand-new experience for us to a cre
 
 ## Approaches
 
-
+### Baseline
+We 
