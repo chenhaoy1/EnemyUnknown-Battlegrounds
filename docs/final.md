@@ -11,13 +11,13 @@ As its name suggest, our project idea is inspired by the most polular vedio game
 </div>
 
 
-As for the challenges, we have lots of possible states should be defined in the 40x40 environment. Also, the agent has five actions should be taken into consideration. In the trainning process, the agent should learn to avoid enemies' attacks and make some predictions according to their moves. After trainning the agent, the agent can intelligently avoid the enemies attacks and even attack them to protect itself - this is where we use an AL/ML algorithm. We mainly use reinforcement learning for problem, and we focus on Q-learning in this project.
+As for the challenges, we have lots of possible states should be defined in the 40x40 environment. Also, the agent has six actions should be taken into consideration. In the trainning process, the agent should learn to avoid enemies' attacks and make some predictions according to their moves. After trainning the agent, the agent can intelligently avoid the enemies attacks and even attack them to protect itself - this is where we use an AL/ML algorithm. We mainly use reinforcement learning for problem, and we focus on Q-learning in this project.
 
 This project is non-trivial because it is a brand-new experience for us to a create something original program developing from nothing. We implement the most decent algorithm to solve the problem by searching lots of resources online. It is also a kind of process for us to learn new knowledge as a team by communicating, cooperating, and integrating different opinions to reach unanimity. 
 
 ## Approaches
 
-We have 3 enemies(zombies), 2 pigs and 10 traps spawn randomly in a 40X40 flat ground. The agent has 5 actions (left, right, forward, backward, attack) and the agent should try to escape from zombies as far as possible to survive in the environment. It can also kill pigs to increase its health point and survival time in the world. 
+We have 3 enemies(zombies), 2 pigs and 10 traps spawn randomly in a 40X40 flat ground. The agent has 6 actions (left, right, forward, backward, attack, stop) and the agent should try to escape from zombies as far as possible to survive in the environment. It can also kill pigs to increase its health point and survival time in the world. 
 
 ### Algorithm
 And our basic algorithm idea is from CS 175 classes. We decision to use Q-learning algorithm to solve the problem. The Q-learning algorithm's logic is quite similar to the pseudo code given below. The Q-learning algorithm will choose the action with the highest Q-value for each state. The Q-value is calculated based on our defined rewards resulting from a state. The constant α(alpha), γ(gamma), ε(epsilon), and n(backsteps) were used to trim the algorihm and improve the performance.
@@ -52,7 +52,11 @@ The agent will deal with the current reward after getting into each move. The ag
 The code below perform the above description.
 
 <img src="4.jpg" width="50%">
+### Action 
+
 
 ### State Space
 <img src="8.png" width="50%">
 From the picture draw above, we use the tangent calculated by the agent position and the enemy's postion to detect the nearby enemies. In the circle with radius 2, the agent can attack to kill a pig to increase its health points, and the reward is (). The agent can also detect the enemies in the circle with radius 8. There are 8 different areas which seperated by tangent. In these areas, the agent can try to escape from the enemies as far as possible with a reward (). 
+
+### Rewards
