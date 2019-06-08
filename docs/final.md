@@ -77,7 +77,7 @@ The equation looks like this: Q(s,a) <- Q(s,a)+alpha(r+y(maxQ(s',a')-Q(s,a))). T
 ```
 
 ### Action
-The agent has 6 actions now (left, right, forward, backward, attack, stop). The agent can run 4 different directions and even stop to escape from enemies. To benefit from the environment, the agent can attack its prey(pigs) to increase its health points according to its rewards.
+The agent has 6 actions now (left, right, forward, backward, attack, stop). The agent can run 4 different directions and even stop to escape from enemies' attacks. To benefit from the environment, the agent can attack its prey(pigs) to increase its health points according to its rewards.
 
 
 <div align="center">
@@ -89,10 +89,9 @@ The agent has 6 actions now (left, right, forward, backward, attack, stop). The 
 
 
 
-
 ### State Space
 <img src="8.png" width="50%">
-From the picture draw above, we use the tangent calculated by the agent position and the enemy's postion to detect the nearby enemies. In the circle with radius 2, the agent can attack to kill a pig to increase its health points, and the reward is (). The agent can also detect the enemies in the circle with radius 8. There are 8 different areas which seperated by tangent. In these areas, the agent can try to escape from the enemies as far as possible with a reward (). 
+From the picture draw above, we use the tangent calculated by the agent position and the enemy's postion to detect the nearby enemies. The red spot represents the position of the agent. In the circle with radius 2, the agent can attack to kill a pig to increase its health points. The agent can also detect the enemies by two different ways. In the circle with radius 8, the agent will get more punishments to escape from enemies as far as possible. Outside the circle with radius 8, the agent will also try to keep away from its enemies but with less punishments. 
 
 ### Rewards
 First of all, the agent with its current state will get a list of possible actions and choose a move by implementing ε-Greedy Policy. Instead, The agent returns a random action with probability eps, but with (1-eps) it picks the action with the highest Q-value. The code below perform the above description.
