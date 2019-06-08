@@ -86,32 +86,20 @@ The agent has 6 actions now (left, right, forward, backward, attack, stop). The 
 <img src="16.png" width="400"> <img src="17.png" width="400">
 </div> 
 
-Below is part of corresponding action code for reference.
+Below is corresponding action pseudocode code for reference.
 ```python
    if(act=='forward'):
-        #print('forward')
-        agent_host.sendCommand("strafe 0")
-        agent_host.sendCommand("move 1")
-        time.sleep(1) 
-      elif(act=='backward'):
-        #print('backward')
-        agent_host.sendCommand("strafe 0")
-        agent_host.sendCommand("move -1")
-        time.sleep(0.8)
-      elif(act=='left'):
-        #print('left')
-        agent_host.sendCommand("move 0")
-        agent_host.sendCommand("strafe -1")
-        time.sleep(0.8)
-      elif(act=='right'):
-        #print('right')
-        agent_host.sendCommand("move 0")
-        agent_host.sendCommand("strafe 1")
-        time.sleep(0.8)       
-      elif(act == 'stop'):
-        agent_host.sendCommand("move 0")
-        agent_host.sendCommand("strafe 0")
-        time.sleep(0.4)
+        agent moves forward
+   elif(act=='backward'):
+        agent moves backward
+   elif(act=='left'):
+        agent moves left
+   elif(act=='right'):
+        agent moves right    
+   elif(act == 'stop'):
+        agent stops
+   elif(act == 'attack'):
+        agent attacks preys
 ```
 
 
@@ -124,7 +112,9 @@ Below is part of corresponding action code for reference.
 From the picture draw above, we use the tangent calculated by the agent position and the enemy's postion to detect the nearby enemies seperated to 0-7 directions. The red spot represents the position of the agent. In the circle with radius 2, the agent can attack to kill a pig to increase its health points. The agent can also detect the enemies by two different ways. In the circle with radius 8, the agent will get more punishments to escape from enemies as far as possible. Outside the circle with radius 8, the agent will also try to keep away from its enemies but with less punishments. If the agent don't detect the zombies nearby, it will return -1 to the current state.
 
 ### Rewards
-First of all, the agent with its current state will get a list of possible actions and choose a move by implementing ε-Greedy Policy. Instead, The agent returns a random action with probability eps, but with (1-eps) it picks the action with the highest Q-value. The code below perform the above description.
+For the reward part, we set different kinds of reward for the agent to learn from the environment. 
+
+After every move of our agent, the agent will get a current state and store the privous state. There are states we have. The first one is our health points, the second and third one is the relative distance of the closest two enemies surrounding the agent. The health points of 0 means the agent dies and reward is -1000. 1 means half alive and the reward is -50. 2 means full alive and the reward is +50. The distance value of 0 means greater distance between the agent and the enemy and the reward is +50. The distance value of 1 means closer distance and reward is -50. The agent will always compute the total reward it gains by checking its current state and it stores current and next status, action, reward for upating q-table. If agent find its health points reach 0, it will return the final reward to the terminal and quit the game immediately without continuing any afterward steps. If it is still alive, the agent will continue to find the next action and act. The code below perform the above description.
 
 ```python
    possible_actions = self.get_possible_move(agent_host)
@@ -163,4 +153,4 @@ First of all, the agent with its current state will get a list of possible actio
                     S.append('Term State')
                     present_reward = current_r
 ```
-After every move of our agent, the agent will get a current state and store the privous state. There are states we have. The first one is our health points, the second and third one is the relative distance of the closest two enemies surrounding the agent. The health points of 0 means the agent dies and reward is -1000. 1 means half alive and the reward is -50. 2 means full alive and the reward is +50. The distance value of 0 means greater distance between the agent and the enemy and the reward is +50. The distance value of 1 means closer distance and reward is -50. The agent will always compute the total reward it gains by checking its current state and it stores current and next status, action, reward for upating q-table. If agent find its health points reach 0, it will return the final reward to the terminal and quit the game immediately without continuing any afterward steps. If it is still alive, the agent will continue to find the next action and act. The code below perform the above description.
+
