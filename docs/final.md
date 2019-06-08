@@ -21,10 +21,9 @@ We have 3 enemies(zombies), 2 pigs and 10 traps spawn randomly in a 40X40 flat g
 
 ### Algorithm
 And our basic algorithm idea is from CS 175 classes. We decision to use Q-learning algorithm to solve the problem. The Q-learning algorithm's logic is quite similar to the pseudo code given below. The Q-learning algorithm will choose the action with the highest Q-value for each state. The Q-value is calculated based on our defined rewards resulting from a state. The constant α(alpha), γ(gamma), ε(epsilon), and n(backsteps) were used to trim the algorihm and improve the performance.
-<div align="center">
+
 <img src="Pseudocode.jpg" width="50%">
 <img src="Pseudocode1.jpg" width="50%">
-</div>
 
 First of all, the agent with its current state will get a list of possible actions and choose a move by implementing ε-Greedy Policy. Instead, The agent returns a random action with probability eps, but with (1-eps) it picks the action with the highest Q-value. The code below perform the above description.
 
