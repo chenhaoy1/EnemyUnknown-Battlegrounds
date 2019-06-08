@@ -25,6 +25,16 @@ And our basic algorithm idea is from CS 175 classes. We decision to use Q-learni
 <img src="Pseudocode.jpg" width="50%">
 <img src="Pseudocode1.jpg" width="50%">
 
+The constant values work pretty well for our environment, so we perserve the value of each constant. 
+<img src="11.png" width="50%">
+α = 0.3 - Based on our stochastic environment, we decide to use a small alpha value(0.3) to train our agent. In compromise of learning speed, our agent can learn stably with the small alpha value due to the complicated state and environment. It greatly fits our environment and the performance of agent becomes significantly better after trainning for a while.
+
+γ = 1 - The discount factor gamma determines the importance of future rewards. A factor approaching 1 will make it strive for a long-term high reward. In our case, we set gamma to 1 because our goal is to let the agent survive as long as possible in the world. Thus, this is a decent value in our environment.
+
+ε = 0.3 - Epsilon is the value that how often you want your agent to explore vs exploit. It refers to the random action that our AI will do instead of action with highest Q-value. The random actions will sometimes benefit our agent because it can sometimes escape from the zombies, so we don't set epsilon close to 0 and we set it to 0.3.
+
+n = 1 - N is the number of backsteps to update. We set it to 1 because we want to update our Q table immediately after each action. It works well in our environment. 
+
 First of all, the agent with its current state will get a list of possible actions and choose a move by implementing ε-Greedy Policy. Instead, The agent returns a random action with probability eps, but with (1-eps) it picks the action with the highest Q-value. The code below perform the above description.
 
 <img src="10.png" width="50%">
