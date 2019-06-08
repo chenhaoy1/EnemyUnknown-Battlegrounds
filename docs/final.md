@@ -26,7 +26,11 @@ And our basic algorithm idea is from CS 175 classes. We decision to use Q-learni
 <img src="Pseudocode1.jpg" width="50%">
 
 The constant values work pretty well for our environment, so we perserve the value of each constant. 
+
+
 <img src="11.png" width="50%">
+
+
 α = 0.3 - Based on our stochastic environment, we decide to use a small alpha value(0.3) to train our agent. In compromise of learning speed, our agent can learn stably with the small alpha value due to the complicated state and environment. It greatly fits our environment and the performance of agent becomes significantly better after trainning for a while.
 
 γ = 1 - The discount factor gamma determines the importance of future rewards. A factor approaching 1 will make it strive for a long-term high reward. In our case, we set gamma to 1 because our goal is to let the agent survive as long as possible in the world. Thus, this is a decent value in our environment.
