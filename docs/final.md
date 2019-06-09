@@ -160,6 +160,17 @@ The health points of 0 means the agent dies and reward is -1000. 1 means the age
 We will assess our AI using both qualitative and quantitative mathods and illustrate the performance of our agent using statistics graph.
 
 #### Quantitative evaluation
+We use the alive time of the agent in the increasing episodes to evaluate our agent's performance quantitatively(we show the best move after every 5 episodes).
+
+<img src="5.jpg" width="50%">
+
+From the graph above, it is the agent who can't attack preys to increase its health points. As we can see from the plot, the alive time for our agent is increasing gradually from first 10s to the last 30s, although the alive time at the end is still low.
+
+<img src="19.jpg" width="50%">
+
+In our improved agent who can attack pigs to increase its health points, it appears that the alive time is increasing notably from beginning 20s to at most 250s in the end. The modified algorithm and the new action "attack" successfully increase the agent's survival time after trainning for a while. Our improved agent now's performance is more consistent and stable because we consider more comprehensive states situation and the action to attact preys to increase its HP. The agent can survive much longer at the end of our trainning.
+
+<img src="18.jpg" width="50%">
 
 
 #### Qualitative evaluation
