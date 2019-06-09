@@ -172,6 +172,15 @@ In our improved agent who can attack pigs to increase its health points, it appe
 
 <img src="18.jpg" width="50%">
 
+In this picture above, the yellow line appears that our improved agent can be more stable to do some continuous moves. It also shows that our algorithm is fit to our agent in the environment.
 
 #### Qualitative evaluation
+
+Our way to qualitatively evaluate the agent is observing its moves and actions and whether our AI is intelligently escaping from enemies or just randomly moving in the environment. There is a video at the top of the page to vividly illustrate how our agent can trainedly escape from enemies and survive in the world as long as possible.
+
+## Reference
+1.The resource used for deep q learning tutorial:[https://sergioskar.github.io/Deep_Q_Learning/](https://sergioskar.github.io/Deep_Q_Learning/)
+
+2.The simple reinforcement learning tutorial: [https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-0-q-learning-with-tables-and-neural-networks-d195264329d0](https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-0-q-learning-with-tables-and-neural-networks-d195264329d0)
+
 
