@@ -156,3 +156,11 @@ The health points of 0 means the agent dies and reward is -1000. 1 means the age
                     present_reward = current_r
 ```
 
+##  Evaluation
+We will assess our AI using both qualitative and quantitative mathods and illustrate the performance of our agent using statistics graph.
+
+#### Quantitative evaluation
+
+
+#### Qualitative evaluation
+
