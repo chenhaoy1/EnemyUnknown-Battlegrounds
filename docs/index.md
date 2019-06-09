@@ -14,6 +14,7 @@ As its name suggest, our project idea is inspired by the most polular vedio game
 - [Source code](https://github.com/chenhaoy1/EnemyUnknown-Battlegrounds)
 
 ## Resources Used:
+We mainly used the class notes and textbook for our  reference material. Below are some additional resources for us to learn and improve our algorithm. 
 
 1.The resource used for deep q learning tutorial:[https://sergioskar.github.io/Deep_Q_Learning/](https://sergioskar.github.io/Deep_Q_Learning/)
 
