@@ -179,6 +179,8 @@ In this picture above, the yellow line appears that our improved agent can be mo
 Our way to qualitatively evaluate the agent is observing its moves and actions and whether our AI is intelligently escaping from enemies or just randomly moving in the environment. There is a video at the top of the page to vividly illustrate how our agent can trainedly escape from enemies and survive in the world as long as possible.
 
 ## Reference
+We mainly used the class notes and textbook for our  reference material. Below are some additional resources for us to learn and improve our algorithm. 
+
 1.The resource used for deep q learning tutorial:[https://sergioskar.github.io/Deep_Q_Learning/](https://sergioskar.github.io/Deep_Q_Learning/)
 
 2.The simple reinforcement learning tutorial: [https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-0-q-learning-with-tables-and-neural-networks-d195264329d0](https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-0-q-learning-with-tables-and-neural-networks-d195264329d0)
