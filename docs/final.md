@@ -5,8 +5,8 @@ title: Final
 
 ## Video
 
-<div style="position:relative;height:0;padding-bottom:56.25%"><iframe width="533" height="300" src="https://www.youtube.com/embed/o167zavZICI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+<iframe width="533" height="300" src="https://www.youtube.com/embed/o167zavZICI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 ## Project Summary:
 
