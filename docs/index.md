@@ -13,7 +13,7 @@ As its name suggest, our project idea is inspired by the most polular vedio game
 
 - [Source code](https://github.com/chenhaoy1/EnemyUnknown-Battlegrounds)
 - [Status Video](https://youtu.be/3wma79Rhkk0)
-- [Final Video](https://youtu.be/3wma79Rhkk0)
+- [Final Video](https://www.youtube.com/embed/o167zavZICI)
 
 ## Resources Used:
 We mainly used the class notes and textbook for our  reference material. Below are some additional resources for us to learn and improve our algorithm. 
